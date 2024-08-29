@@ -1,0 +1,404 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+   color:#000000;
+}
+html,body{
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+    position: relative;
+}
+body::-webkit-scrollbar{
+    background-color: #ffffff;
+    width:8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #FCC817;
+    border-radius: 6px;
+}
+body::-webkit-scrollbar-corner{
+    width:6px;
+    border-radius: 6px;;
+}
+.cart::-webkit-scrollbar{
+    background-color: #ffffff;
+    width:8px;
+}
+.cart::-webkit-scrollbar-thumb{
+    background-color: #FCC817;
+    border-radius: 6px;
+}
+.cart::-webkit-scrollbar-corner{
+    width:6px;
+    border-radius: 6px;
+}
+.main{
+    height:100%;
+    width:100%;
+    display: flex;
+    position: relative;
+}
+.nav-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 10px;
+  height:70px;
+  width:100%;
+  /* position: relative; */
+  z-index: 11;
+    background-color: #000000;
+}
+.nav-top .logo{
+    height:110px;
+    width:110px;
+    border-radius: 50%;
+    border:1px solid #fff;
+    position: relative;
+    top:22px;
+}
+ .nav-top .no{
+    background-color: #FCC817;
+    border-radius: 8px;
+    border: none;
+    padding:0px 10px;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+    color:#fff;
+}
+.nav-top .no:hover{
+  scale:1.04;
+}
+.nav-top .fa-cart-shopping{
+    color:#FCC817;
+    font-size: 20px;
+}
+.nav-down{
+    position: sticky;
+    top:0;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:20px 0;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    background-color: #fff;
+    white-space: nowrap;
+    width:100%;
+    z-index: 11;
+}
+.nav-down span a{
+    text-decoration: none;
+    color:#000000;
+    padding-left:20px;
+}
+  
+.menu{
+    width:70%;
+    height: 100%;
+
+}
+.cart{
+    width: 30%;
+   height: 100vh;
+   position: sticky;
+     right: 0px;
+    top: 0px; 
+    /* top:0; */
+    z-index: 9;
+    /* display: none; */
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: auto;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+}
+h1{
+    color:#212529;
+    font-weight: 400;
+}
+h1::selection{
+    background-color: #FCC817;
+    color:#fff;
+}
+.beef-burger,.premium-burger,.crispyChicken-burger,.grilledChicken-burger,.valueChicken-burger,.wraps,.loadedFries,.gourmentFries,.appetizers{
+    min-height: 40vh;
+   width:90%;
+    margin: 40px auto;
+    padding:20px 0;
+    /* background-color: #FCC817; */
+}
+.beef-burger h1,.premium-burger h1,.crispyChicken-burger h1,.grilledChicken-burger h1,.valueChicken-burger h1,.wraps h1,.loadedFries h1,.gourmentFries h1,.appetizers h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.beef-burger-menu,.premium-burger-menu,.crispyChicken-burger-menu,.grilledChicken-burger-menu,.valueChicken-burger-menu,.chickenWraps-menu,.loadedFries-fries-menu,.gourmentFries-fries-menu,.appetizers-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    gap:2vw;
+}
+.beef-burger-menu .beef-menu,.premium-burger-menu .premium-menu,.crispyChicken-burger-menu .crispyChicken-menu,.grilledChicken-burger-menu .grilledChicken-menu,.valueChicken-burger-menu .valueChicken-menu,.chickenWraps-menu .wrap-menu,.loadedFries-fries-menu .loadedFries-menu,.gourmentFries-fries-menu .gourmentFries-menu,.appetizers-wrapper .appetizer-menu{
+   width:30vw;
+   max-height: 30vh;
+    background-color: #FFFDF6;
+    display: flex;
+    align-items: center;
+  
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+    gap:1vw;
+   padding:20px 0;
+   border-radius: 8px;
+   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.1);
+   position: relative;
+   overflow: hidden;
+}
+
+@media screen and (max-width: 991px) {
+
+    .close{
+        display: flex;
+    }
+.cart{
+    position: absolute;
+    top:0;
+    background-color: #ffffff;
+    width:100%;
+    height: 100%;
+    display: none;
+}
+.beef-burger,.premium-burger,.crispyChicken-burger,.grilledChicken-burger,.valueChicken-burger,.wraps,.loadedFries,.gourmentFries,.appetizers{
+   width:90%;
+    margin: 40px auto;
+    padding:20px 0;
+}
+.menu{
+    width:100%;
+    height:100%;
+}
+
+.beef-burger-menu .beef-menu,.premium-burger-menu .premium-menu,.crispyChicken-burger-menu .crispyChicken-menu,.grilledChicken-burger-menu .grilledChicken-menu,.valueChicken-burger-menu .valueChicken-menu,.chickenWraps-menu .wrap-menu,.loadedFries-fries-menu .loadedFries-menu,.gourmentFries-fries-menu .gourmentFries-menu,.appetizers-wrapper .appetizer-menu{
+    max-width:50%;
+     background-color: #FFFDF6;
+     display: flex;
+     align-items: center;
+      flex-grow: 1;
+     flex-shrink: 0; 
+     gap:1vw;
+    padding:20px 0;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+ } 
+}
+
+@media screen and (max-width: 750px) {
+
+    .close{
+        display: flex;
+    }
+    .cart{
+        display: none;
+        height:100%;
+    }
+    .beef-burger,.premium-burger,.crispyChicken-burger,.grilledChicken-burger,.valueChicken-burger,.wraps,.loadedFries,.gourmentFries,.appetizers{
+        width:95%;
+     }
+
+    .beef-burger-menu .beef-menu,.premium-burger-menu .premium-menu,.crispyChicken-burger-menu .crispyChicken-menu,.grilledChicken-burger-menu .grilledChicken-menu,.valueChicken-burger-menu .valueChicken-menu,.chickenWraps-menu .wrap-menu,.loadedFries-fries-menu .loadedFries-menu,.gourmentFries-fries-menu .gourmentFries-menu,.appetizers-wrapper .appetizer-menu{
+  width:100%;
+ max-width: none;
+    }
+    .beef-burger-menu,.premium-burger-menu,.crispyChicken-burger-menu,.grilledChicken-burger-menu,.valueChicken-burger-menu,.chickenWraps-menu,.loadedFries-fries-menu,.gourmentFries-fries-menu,.appetizers-wrapper{
+        display: flex;
+       flex-direction: column;
+        width:100%;
+        gap:2vw;
+    }
+
+}
+
+.beef-burger .img img,.premium-burger .img img,.crispyChicken-burger .img img,.grilledChicken-burger .img img,.valueChicken-burger .img img,.wraps .img img,.loadedFries .img img,.gourmentFries .img img,.appetizers .img img{
+    max-width: 170px;
+    max-height: 170px;
+}
+.burger-info{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    gap:1vw;
+}
+.burger-info p{
+    color:gray;
+    font-size: 13px;
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
+    display: -webkit-box; /* Required for webkit browsers */
+    -webkit-box-orient: vertical; /* Required for webkit browsers */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    line-height: 1.5em; /* Adjust line height as needed */
+    max-height: 4.5em; /* Adjust max height based on line height and number of lines */
+    height: auto; /* Allow height to adjust automatically */
+}
+.burger-info .rs{
+    background-color: red;
+    /* padding:6px 6px; */
+    border-radius: 4px;
+    color: #fff;
+    width:50px;
+}
+.addToCart{
+    position: absolute;
+    bottom: 6px;
+    right:6px;
+    font-size: 20px;
+    color:#fff;
+    background-color: #FCC817;
+    padding:0 4px;
+    cursor: pointer;
+    border:none;
+}
+.empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.empty div:nth-child(2){
+    color: #FCC817;
+    font-weight: bold;
+    
+}
+.empty div:nth-child(3){
+  font-size: 16px;
+  color:grey;
+}
+.order{
+    display: none;
+}
+
+
+.cart nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:18px 12px;
+    display: none;
+}
+nav .cart-heading{
+    font-size: 20px;
+}
+.exit-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1vw;
+}
+.clear-cart{
+    background-color: #FCC817;
+    padding:5px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    color:#ffffff;
+    font-weight: 900;
+    cursor: pointer;
+}
+.close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     width:30px;
+     height:30px;
+     background-color: rgb(236, 177, 177);
+     border-radius: 50%;
+     border: none;
+     font-weight: 900;
+}
+.order{
+    min-height:20vh;
+}
+.order-wrapper{
+    padding-top:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+
+}
+.info{
+    display: flex;
+    align-items: center;
+    gap:2vw;
+    padding:20px 10px;
+}
+.info img{
+    height:50px;
+    width:50px;
+}
+.pricing{
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+    cursor: pointer;
+    font-size: 13px;
+}
+.delete{
+    display: flex;
+    align-items: center;
+    gap:1vw;
+}
+.fa-trash{
+    font-size: 14px;
+    color: rgb(189, 24, 24);
+}
+.fa-trash,.fa-plus:hover{
+    transform: scale(1.02rem);
+}
+.separation{
+   border-bottom: 0.5px solid rgb(230, 222, 222);
+}
+.total,.deliveryFee,.grandTotal,.tax{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:10px;
+}
+.grandTotal{
+    font-weight: 900;
+}
+.totalCheckout,.deliveryTime{
+    margin-top:30px;
+    display: none;
+}
+.deliveryTime span{
+    color:rgb(37, 102, 223);
+    font-weight: 800;
+}
+.orderFooter{
+    position: fixed;
+    bottom:20px;
+    background-color: #FCC817;
+    color: #000000;
+    padding:20px 0;
+    text-align: center;
+    width:100%;
+    font-weight: 900;
+    display: none;
+    z-index: 99;
+
+}
+.orderFooter a{
+    text-decoration: none;
+}
+.close{
+    display: none;
+}
